@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>View Cricket Team</title>
+</head>
+<body>
+<h1>View Cricket Team</h1>
+
+<form action="/view-team" method="post">
+  <label for="teamId">Enter Team ID:</label><br>
+  <input type="text" id="teamId" name="teamId"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<div th:if="${team}">
+  <h2>Details of Team ID: [[${team.teamId}]]</h2>
+  <p>Team Name: [[${team.teamName}]]</p>
+  <p>Test Ranking: [[${team.testRanking}]]</p>
+  <p>ODI Ranking: [[${team.odiRanking}]]</p>
+  <p>T20 Ranking: [[${team.t20Ranking}]]</p>
+</div>
+
+<div th:if="${errorMessage}">
+  <p style='color:red;'>[[${errorMessage}]]</p>
+</div>
+
+<a href="/home">Back to Home</a>
+
+</body>
+</html>
