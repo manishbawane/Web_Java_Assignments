@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Cricket Team</title>
+</head>
+<body>
+<h1>Add Cricket Team</h1>
+<form action="/add-team" method="post">
+  <label for="teamId">Team ID:</label><br>
+  <input type="text" id="teamId" name="teamId"><br><br>
+  
+  <label for="teamName">Team Name:</label><br>
+  <input type="text" id="teamName" name="teamName"><br><br>
+
+  <label for="testRanking">Test Ranking:</label><br>
+  <input type="number" id="testRanking" name="testRanking"><br><br>
+
+  <label for="odiRanking">ODI Ranking:</label><br>
+  <input type="number" id="odiRanking" name="odiRanking"><br><br>
+
+  <label for="t20Ranking">T20 Ranking:</label><br>
+  <input type="number" id="t20Ranking" name="t20Ranking"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<a href="/home">Back to Home</a>
+</body>
+</html>
